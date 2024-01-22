@@ -1,0 +1,130 @@
+[debug] [2024-01-21T22:44:33.420Z] ----------------------------------------------------------------------
+[debug] [2024-01-21T22:44:33.423Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\akoli\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-01-21T22:44:33.424Z] CLI Version:   13.0.3
+[debug] [2024-01-21T22:44:33.424Z] Platform:      win32
+[debug] [2024-01-21T22:44:33.424Z] Node Version:  v20.11.0
+[debug] [2024-01-21T22:44:33.424Z] Time:          Sun Jan 21 2024 22:44:33 GMT+0000 (Greenwich Mean Time)
+[debug] [2024-01-21T22:44:33.425Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-01-21T22:44:33.535Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-01-21T22:44:33.536Z] > authorizing via signed-in user (sakoliya.uk@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\akoli\Desktop\portfolio_tlw
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-01-21T22:44:39.653Z] Using project from CLI flag: portfolio-project-8aa1f
+[debug] [2024-01-21T22:44:39.655Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-project-8aa1f [none]
+[debug] [2024-01-21T22:44:39.916Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-project-8aa1f 200
+[debug] [2024-01-21T22:44:39.916Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-project-8aa1f {"projectId":"portfolio-project-8aa1f","projectNumber":"470263258213","displayName":"Portfolio Project","name":"projects/portfolio-project-8aa1f","resources":{"hostingSite":"portfolio-project-8aa1f"},"state":"ACTIVE","etag":"1_b7f8eb7f-9cf1-4eeb-b179-3b529d6bfd8b"}
+[info] i  Using project portfolio-project-8aa1f (Portfolio Project) 
+[info] 
+=== Hosting Setup
+[debug] [2024-01-21T22:44:39.926Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-project-8aa1f [none]
+[debug] [2024-01-21T22:44:40.085Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-project-8aa1f 200
+[debug] [2024-01-21T22:44:40.085Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-project-8aa1f {"projectId":"portfolio-project-8aa1f","projectNumber":"470263258213","displayName":"Portfolio Project","name":"projects/portfolio-project-8aa1f","resources":{"hostingSite":"portfolio-project-8aa1f"},"state":"ACTIVE","etag":"1_b7f8eb7f-9cf1-4eeb-b179-3b529d6bfd8b"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2024-01-21T22:45:01.413Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2024-01-21T22:45:01.486Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2024-01-21T22:45:01.487Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"10.7.2","browserURL":"https://www.gstatic.com/firebasejs/10.7.2/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/10.7.2/firebase.tgz"},"live":{"version":"10.7","browserURL":"https://www.gstatic.com/firebasejs/live/10.7/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/10.7/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/10.7.2/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/10.7.2/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/10.7.2/firebase-auth/cordova.js","functions":"https://www.gstatic.com/firebasejs/10.7.2/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/10.7.2/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/10.7.2/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/10.7.2/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/10.7.2/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/10.7.2/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/10.7.2/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/10.7.2/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore.memory.js"}}
+[info] i  Skipping write of build/index.html 
+[info] 
+[info] i  Detected a .git folder at C:\Users\akoli 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=601383392&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2024-01-21T22:45:04.647Z] Error: spawn cmd ENOENT
+    at ChildProcess._handle.onexit (node:internal/child_process:286:19)
+    at onErrorNT (node:internal/child_process:484:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-01-21T22:45:34.718Z] ----------------------------------------------------------------------
+[debug] [2024-01-21T22:45:34.722Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\akoli\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-01-21T22:45:34.723Z] CLI Version:   13.0.3
+[debug] [2024-01-21T22:45:34.723Z] Platform:      win32
+[debug] [2024-01-21T22:45:34.723Z] Node Version:  v20.11.0
+[debug] [2024-01-21T22:45:34.723Z] Time:          Sun Jan 21 2024 22:45:34 GMT+0000 (Greenwich Mean Time)
+[debug] [2024-01-21T22:45:34.724Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-01-21T22:45:34.847Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-01-21T22:45:34.848Z] > authorizing via signed-in user (sakoliya.uk@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\akoli\Desktop\portfolio_tlw
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-01-21T22:45:39.331Z] Using project from CLI flag: portfolio-project-8aa1f
+[debug] [2024-01-21T22:45:39.334Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-project-8aa1f [none]
+[debug] [2024-01-21T22:45:39.636Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-project-8aa1f 200
+[debug] [2024-01-21T22:45:39.636Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-project-8aa1f {"projectId":"portfolio-project-8aa1f","projectNumber":"470263258213","displayName":"Portfolio Project","name":"projects/portfolio-project-8aa1f","resources":{"hostingSite":"portfolio-project-8aa1f"},"state":"ACTIVE","etag":"1_b7f8eb7f-9cf1-4eeb-b179-3b529d6bfd8b"}
+[info] i  Using project portfolio-project-8aa1f (Portfolio Project) 
+[info] 
+=== Hosting Setup
+[debug] [2024-01-21T22:45:39.646Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-project-8aa1f [none]
+[debug] [2024-01-21T22:45:39.831Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-project-8aa1f 200
+[debug] [2024-01-21T22:45:39.831Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-project-8aa1f {"projectId":"portfolio-project-8aa1f","projectNumber":"470263258213","displayName":"Portfolio Project","name":"projects/portfolio-project-8aa1f","resources":{"hostingSite":"portfolio-project-8aa1f"},"state":"ACTIVE","etag":"1_b7f8eb7f-9cf1-4eeb-b179-3b529d6bfd8b"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2024-01-21T22:45:46.885Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2024-01-21T22:45:46.925Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2024-01-21T22:45:46.925Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"10.7.2","browserURL":"https://www.gstatic.com/firebasejs/10.7.2/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/10.7.2/firebase.tgz"},"live":{"version":"10.7","browserURL":"https://www.gstatic.com/firebasejs/live/10.7/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/10.7/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/10.7.2/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/10.7.2/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/10.7.2/firebase-auth/cordova.js","functions":"https://www.gstatic.com/firebasejs/10.7.2/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/10.7.2/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/10.7.2/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/10.7.2/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/10.7.2/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/10.7.2/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/10.7.2/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/10.7.2/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore.memory.js"}}
+[info] i  Skipping write of build/index.html 
+[info] 
+[info] i  Detected a .git folder at C:\Users\akoli 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=788668875&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2024-01-21T22:45:48.776Z] Error: spawn cmd ENOENT
+    at ChildProcess._handle.onexit (node:internal/child_process:286:19)
+    at onErrorNT (node:internal/child_process:484:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+[error] 
+[error] Error: An unexpected error has occurred.

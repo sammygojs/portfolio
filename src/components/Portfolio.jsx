@@ -1,19 +1,29 @@
 import React from "react";
-import emoji from '../assets/emoji1.png'
+// import emoji from '../assets/emoji1.png'
+// import todo from '../assets/first.png'
+import java from '../assets/java.png'
+import js from '../assets/js.png'
+import nextjs from '../assets/nextjs.png'
 
 const Portfolio = () => {
   const portfolios = [
     {
       id: 1,
-      src: emoji,
+      name: "Todo App",
+      src: nextjs,
+      href: "https://github.com/sammygojs/NextJS_todoApp"
     },
     {
       id: 2,
-      src: emoji,
+      name: "Grade Submission API",
+      src: java,
+      href: "https://github.com/sammygojs/springBoot_GradeSubmission"
     },
     {
       id: 3,
-      src: emoji,
+      name: "Contacts manager API",
+      src: js,
+      href: "https://github.com/sammygojs/API_ContactsMngr"
     },
     // {
     //   id: 4,
@@ -43,19 +53,28 @@ const Portfolio = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-          {portfolios.map(({ id, src }) => (
+          {portfolios.map(({ id, name, src, href }) => (
             <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
               <img
                 src={src}
                 alt=""
-                className="rounded-md duration-200 hover:scale-105"
+                className="rounded-md object-cover h-full duration-200 hover:scale-105 "
               />
+              <div>
+                <h3 className="hover:text-sky-400 text-center px-6 py-3 m-4">
+                  {name}
+                </h3>
+                {/* <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
+                  Name
+                </button> */}
+              </div>
               <div className="flex items-center justify-center">
-                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
+                {/* <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
                   Demo
-                </button>
-                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
-                  Code
+                </button> */}
+                <button className=" hover:border-gray-500 w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
+                  {/* {href} */}
+                  <a href={href}>Code</a>
                 </button>
               </div>
             </div>

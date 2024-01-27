@@ -12,7 +12,7 @@ const SocialLinks = () => {
                 LinkedIn <FaLinkedin size={30}/>
             </>
           ),
-          href: 'https://linkedin.com',
+          href: 'https://linkedin.com/in/sumitakoliya',
           style: 'rounded-tr-md'
         },
         {
@@ -32,7 +32,7 @@ const SocialLinks = () => {
                   Email <HiOutlineMail size={30}/>
               </>
             ),
-            href: 'https://github.com/sammygojs',
+            href: 'mailto:skoliya.uk@gmail.com',
             style: 'rounded-tr-md'
           },
       ]

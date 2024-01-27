@@ -2,20 +2,22 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div className='w-full h-screen bg-gradient-to-b from-gray-800 to-black text-white'>
+    <div id='#about' className='w-full h-full bg-gradient-to-b from-gray-800 to-black text-white'> 
         <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
-            <div className='pb-8'>
-                <p className='text-4xl font-bold inline border-b-4 border-gray-500'>About</p>
-            </div>
-            <p className='text-xl mt-20'>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+            {/* <div className='pb-8'> */}
+                <p className='text-4xl font-bold inline border-b-4'>About</p>
+            {/* </div> */}
+            <p className='text-xl mt-5'>
+           I am a dynamic and results-driven Software Engineer with diverse experience in both Full Stack development using Java and Spring boot, as well as iOS development with a focus on Swift programming. 
+           <h2 className='text-4xl hover:scale-105 duration-200 '>Java developer</h2>
+           My professional journey began at Mindtree Ltd in Bangalore, India, where I played a key role as a Software Engineer from June 2021 to April 2023. In my role with Mindtree Ltd, I was an integral part of the core Full Stack team responsible for providing technological solutions to FORBES TOP 100 businesses looking to expand their core competency to new markets globally. My expertise lies in Java, with a strong proficiency in Object-oriented programming. I have hands-on experience in designing, building, and maintaining Java-based componentsWith over 1 year of experience in building and maintaining codebases. My knowledge extends to various design patterns, reusable Java libraries, and concepts such as MVC, JDBC, and JSP. 
+           <h2 className='text-4xl hover:scale-105 duration-200 '>Ios developer</h2>
+           As an iOS Developer, I am proficient in Swift programming, data structures, and algorithms. My responsibilities have included gathering requirements, creating UIScreens in Storyboard with Xcode14, and implementing TableView and CollectionView to display data as per project requirements. I have also utilized ARKit for creating and maintaining three Augmented Reality projects. My skill set encompasses working with UIKit and understanding key iOS concepts such as Notifications, Delegation, and Key Value Observation. 
+           My passion for technology and innovation, coupled with my ability to adapt and thrive in dynamic environments, has been a driving force in my professional journey. I am committed to staying abreast of the latest industry trends and technologies, ensuring that I bring a forward-thinking approach to every project I undertake.
             </p>
 
             <br/>
 
-            <p className='text-xl'>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
-            </p>
         </div>
     </div>
   )

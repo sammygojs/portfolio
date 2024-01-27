@@ -1,6 +1,7 @@
 import React from 'react'
 // import emoji from '../assets/emoji1.png'
-import avatar from '../assets/avatar.mp4'
+// import avatar from '../assets/avatar.mp4'
+import avatar from '../assets/avatar.png'
 
 const Home = () => {
   return (
@@ -23,8 +24,8 @@ const Home = () => {
             </div>
             
             <div >
-                {/* <img src={emoji} alt='my text' className='rounded-2xl mx-auto md:w-full p-4 sm:w-full'/> */}
-                <video src={avatar} className='rounded-2xl mx-auto md:w-full p-4 sm:w-full' autoPlay loop muted />
+                <img src={avatar} alt='my text' className='rounded-2xl mx-auto md:w-full p-4 sm:w-full'/>
+                {/* <video src={avatar} className='rounded-2xl mx-auto md:w-full p-4 sm:w-full' autoPlay loop muted /> */}
             </div>
         </div>
     </div>

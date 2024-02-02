@@ -5,7 +5,7 @@ import avatar from '../assets/avatar.png'
 
 const Home = () => {
   return (
-    <div className='w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500'>
+    <div className='w-full md:h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500 sm:h-fit'>
         <div className='max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row'>
             <div className='flex flex-col justify-center px-20 mt-20'>
                 <h2 className='text-4xl sm:text-7xl font-bold text-white'>I'm a Software Engineer in 
@@ -24,7 +24,7 @@ const Home = () => {
             </div>
             
             <div >
-                <img src={avatar} alt='my text' className='rounded-2xl mx-auto md:w-full p-4 sm:w-full'/>
+                <img src={avatar} alt='my text' className='mx-auto md:w-full p-4 sm:w-full rounded-3xl'/>
                 {/* <video src={avatar} className='rounded-2xl mx-auto md:w-full p-4 sm:w-full' autoPlay loop muted /> */}
             </div>
         </div>

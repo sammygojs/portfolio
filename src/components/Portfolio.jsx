@@ -25,6 +25,24 @@ const Portfolio = () => {
       src: js,
       href: "https://github.com/sammygojs/API_ContactsMngr"
     },
+    {
+      id: 1,
+      name: "Todo App",
+      src: nextjs,
+      href: "https://github.com/sammygojs/NextJS_todoApp"
+    },
+    {
+      id: 2,
+      name: "Grade Submission API",
+      src: java,
+      href: "https://github.com/sammygojs/springBoot_GradeSubmission"
+    },
+    {
+      id: 3,
+      name: "Contacts manager API",
+      src: js,
+      href: "https://github.com/sammygojs/API_ContactsMngr"
+    },
     // {
     //   id: 4,
     //   src: reactSmooth,

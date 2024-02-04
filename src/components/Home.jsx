@@ -8,7 +8,7 @@ const Home = () => {
     <div className='w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500'>
         <div className='max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row'>
             <div className='flex flex-col justify-center px-20 mt-20'>
-                <h2 className='text-4xl sm:text-7xl font-bold text-white'>I'm a Software Engineer in 
+                <h2 className='text-4xl sm:text-7xl font-bold text-white pt-5'>I'm a Software Engineer in 
                 {/* <pre></pre> */}
                 <br/>
                 <h4 className='bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 text-transparent bg-clip-text w-fit inline'>Vanilla JS & </h4>
@@ -23,8 +23,8 @@ const Home = () => {
                 </div>
             </div>
             
-            <div >
-                <img src={avatar} alt='my text' className='mx-auto md:w-full p-4 sm:w-full rounded-3xl'/>
+            <div className='hidden' >
+                <img src={avatar} alt='my text' className='mx-auto p-4 rounded-3xl'/>
                 {/* <video src={avatar} className='rounded-2xl mx-auto md:w-full p-4 sm:w-full' autoPlay loop muted /> */}
             </div>
         </div>

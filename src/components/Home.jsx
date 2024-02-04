@@ -5,7 +5,7 @@ import avatar from '../assets/avatar.png'
 
 const Home = () => {
   return (
-    <div className='w-full md:h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500 sm:h-fit'>
+    <div className='w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500'>
         <div className='max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row'>
             <div className='flex flex-col justify-center px-20 mt-20'>
                 <h2 className='text-4xl sm:text-7xl font-bold text-white'>I'm a Software Engineer in 
@@ -17,7 +17,7 @@ const Home = () => {
                 <p>I have 2 years of professional experience</p>
                 
                 <div>
-                    <button className='text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor pointer'>
+                    <button className='font-bold text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor pointer'>
                         Portfolio
                     </button>
                 </div>

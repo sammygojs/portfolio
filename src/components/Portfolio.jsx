@@ -42,40 +42,45 @@ const Portfolio = () => {
   return (
     <div
       name="portfolio"
-      className="bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-screen"
+      className="md:h-screen bg-gradient-to-b from-black to-gray-800 w-full text-white "
     >
-      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
-        <div className="pb-8">
+      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full">
+        <div className="pb-8 px-12">
           <p className="text-4xl font-bold inline border-b-4 border-gray-500">
             Portfolio
           </p>
           <p className="py-6">Check out some of my work right here</p>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12">
           {portfolios.map(({ id, name, src, href }) => (
             <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
-              <img
-                src={src}
-                alt=""
-                className="rounded-md object-cover h-full duration-200 hover:scale-105 "
-              />
               <div>
-                <h3 className="hover:text-sky-400 text-center px-6 py-3 m-4">
-                  {name}
-                </h3>
+                <p className=" hover:text-sky-400 font-bold text-center p-4">{name}</p>
+                {/* <p href={href} className=" hover:text-sky-400 font-bold text-center p-4">Github repo</p> */}
+                <a href={href}><p href={href} className=" hover:text-sky-400 font-bold text-center p-4">Github repo</p></a>
+                <img
+                  width={470}
+                  src={src}
+                  alt=""
+                  className="rounded-md h-full duration-200 hover:scale-105 " />
+              </div>
+              <div>
+                {/* <h3 className="hover:text-sky-400 text-center p-4">
+{name}
+</h3> */}
                 {/* <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
-                  Name
-                </button> */}
+Name
+</button> */}
               </div>
               <div className="flex items-center justify-center">
                 {/* <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
-                  Demo
-                </button> */}
-                <button className=" hover:border-gray-500 w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
-                  {/* {href} */}
-                  <a href={href}>Code</a>
-                </button>
+Demo
+</button> */}
+                {/* <button className="hover:border-gray-500 w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105"> */}
+                {/* {href} */}
+                {/* <a href={href}>Code</a> */}
+                {/* </button> */}
               </div>
             </div>
           ))}

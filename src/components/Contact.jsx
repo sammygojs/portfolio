@@ -3,6 +3,7 @@ import React from "react";
 const Contact = () => {
   return (
     <div
+      id="Contact"
       name="contact"
       className="w-full md:h-screen bg-gradient-to-b from-gray-800 to-black p-4 text-white px-12"
     >
@@ -42,6 +43,7 @@ const Contact = () => {
             <button className="text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300">
               Let's talk
             </button>
+            {/* <div id="footer"></div> */}
           </form>
         </div>
       </div>

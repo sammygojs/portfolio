@@ -1,6 +1,4 @@
 import React from "react";
-// import emoji from '../assets/emoji1.png'
-// import todo from '../assets/first.png'
 import java from '../assets/java.png'
 import js from '../assets/js.png'
 import nextjs from '../assets/nextjs.png'
@@ -59,6 +57,7 @@ const Portfolio = () => {
 
   return (
     <div
+      id="Portfolio"
       name="portfolio"
       className="md:h-screen bg-gradient-to-b from-black to-gray-800 w-full text-white "
     >

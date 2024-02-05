@@ -38,7 +38,6 @@ const NavBar = () => {
 
       <ul className='hidden md:flex'>
         {links.map(({id, link}) => (
-          <ScrollIntoView selector={link}>
             <li 
             key={id} 
             className='px-4 cursor-pointer capitalize font-medium text-gray-500 hover:text-white hover:scale-105 duration-200'
@@ -49,7 +48,6 @@ const NavBar = () => {
   </button>
 </ScrollIntoView>
             </li> 
-            </ScrollIntoView>
         ))
 
         }
@@ -62,14 +60,17 @@ const NavBar = () => {
         {nav && (
           <ul className='flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500'>
           {links.map(({id, link}) => (
-            <ScrollIntoView selector={link}>
               <li 
+              onClick={()=> setNav(!nav)}
               key={id} 
               className='px-4 cursor-pointer capitalize py-6 text-4xl'
               >
-                {link}
+                <ScrollIntoView selector={'#'+link}>
+  <button className="mdl-button mdl-js-button mdl-button--raised">
+  {link}
+  </button>
+</ScrollIntoView>
               </li> 
-              </ScrollIntoView>
           ))
   
           }

@@ -59,7 +59,7 @@ const Portfolio = () => {
     <div
       id="Portfolio"
       name="portfolio"
-      className="md:h-screen bg-gradient-to-b from-black to-gray-800 w-full text-white "
+      className="bg-gradient-to-b from-black to-gray-800 w-full text-white "
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full">
         <div className="pb-8 px-12">

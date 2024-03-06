@@ -15,7 +15,7 @@ function App() {
       <SocialLinks/>
       <About/>
       <Portfolio/>
-      <Experience/>
+      {/* <Experience/> */}
       <Contact/>
       {/* <h1 className="text-4xl">Sammy</h1> */}
     </div>

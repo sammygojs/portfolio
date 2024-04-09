@@ -5,6 +5,7 @@ import About from './components/About';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import Experience from './components/Experience';
+import Slides from './components/Slides';
 import './index.css';
 
 function App() {
@@ -13,7 +14,9 @@ function App() {
       <NavBar />
       <Home/>
       <SocialLinks/>
-      <About/>
+      
+      {/* <About/> */}
+      <Slides/>
       <Portfolio/>
       {/* <Experience/> */}
       <Contact/>

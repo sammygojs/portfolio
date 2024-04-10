@@ -59,23 +59,23 @@ const Portfolio = () => {
     <div
       id="Portfolio"
       name="portfolio"
-      className="bg-gradient-to-b from-black to-gray-800 w-full text-white "
+      className="bg-gradient-to-b from-blue-200 to-white w-full text-black "
     >
-      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full">
+      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full md:h-screen text-center">
         <div className="pb-8 px-12">
-          <p className="text-4xl font-bold inline border-b-4 border-gray-500">
+          <p className=" text-4xl font-bold inline border-b-4 border-gray-500">
             Portfolio
           </p>
-          <p className="py-6">Check out some of my work right here</p>
+          <p className="py-6 font-semibold">Check out some of my work right here</p>
         </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12">
           {portfolios.map(({ id, name, src, href }) => (
-            <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
+            <div key={id} className="shadow-md shadow-gray-600 rounded-lg p-2">
               <div>
-                <p className=" hover:text-sky-400 font-bold text-center p-4">{name}</p>
+                <p className=" hover:text-sky-400 font-bold text-center text-white p-4 bg-black rounded-xl ">{name}</p>
                 {/* <p href={href} className=" hover:text-sky-400 font-bold text-center p-4">Github repo</p> */}
-                <a href={href}><p href={href} className=" hover:text-sky-400 font-bold text-center p-4">Github repo</p></a>
+                <a href={href}><p href={href} className=" hover:text-sky-400 font-bold text-center text-white p-4 rounded-xl my-2 bg-black">Github repo</p></a>
                 <img
                   width={470}
                   src={src}

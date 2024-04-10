@@ -4,6 +4,8 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const About = () => {
+  
+
   const javaExperience = [
     {
       title: "Spearheaded Development",
@@ -38,33 +40,62 @@ const About = () => {
     autoplaySpeed: 5000
   };
 
+  const isSmallScreen = window.innerWidth <= 640; // Set your breakpoint here
+
   return (
-    <div id="About" className='z-0 w-full h-screen bg-gradient-to-b from-gray-800 to-black text-white flex items-center justify-center'> 
+    <div id="About" className='p-10 font-bold z-2 w-full md:h-screen bg-gradient-to-b from-white to-blue-200 text-black flex items-center justify-center'> 
       <div className='max-w-screen-lg px-16 mx-auto'>
-        <Slider {...sliderSettings}>
-          <div>
-            <h2 className='text-center text-4xl mb-10'>Java Developer</h2>
-            <ul>
-              {javaExperience.map((exp, index) => (
-                <li key={index}>
-                  <h3 className='font-bold p-8 '>{exp.title}</h3>
-                  <p className='px-8 py-4'>{exp.description}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h2 className='text-center text-4xl mb-10'>iOS Developer</h2>
-            <ul>
-              {iosExperience.map((exp, index) => (
-                <li key={index}>
-                  <h3 className='font-bold p-8 '>{exp.title}</h3>
-                  <p className='px-8 py-4'>{exp.description}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </Slider>
+        {isSmallScreen ? (
+          <>
+            <div>
+              <h2 className='text-center text-4xl mb-10'>Java Developer</h2>
+              <ul>
+                {javaExperience.map((exp, index) => (
+                  <li key={index}>
+                    <h3 className='font-bold p-8 '>{exp.title}</h3>
+                    <p className='px-8 py-4'>{exp.description}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h2 className='text-center text-4xl mb-10'>iOS Developer</h2>
+              <ul>
+                {iosExperience.map((exp, index) => (
+                  <li key={index}>
+                    <h3 className='font-bold p-8 '>{exp.title}</h3>
+                    <p className='px-8 py-4'>{exp.description}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </>
+        ) : (
+          <Slider {...sliderSettings}>
+            <div>
+              <h2 className='text-center text-4xl mb-10'>Java Developer</h2>
+              <ul>
+                {javaExperience.map((exp, index) => (
+                  <li key={index}>
+                    <h3 className='font-bold p-8 '>{exp.title}</h3>
+                    <p className='px-8 py-4'>{exp.description}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h2 className='text-center text-4xl mb-10'>iOS Developer</h2>
+              <ul>
+                {iosExperience.map((exp, index) => (
+                  <li key={index}>
+                    <h3 className='font-bold p-8 '>{exp.title}</h3>
+                    <p className='px-8 py-4'>{exp.description}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </Slider>
+        )}
       </div>
     </div>
   );

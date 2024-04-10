@@ -9,10 +9,10 @@ const Contact = () => {
     >
       <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full">
         <div className="pb-8 px-12">
-          <p className="text-6xl font-bold inline border-b-4 border-black">
-            Contact
+        <p className=" text-4xl font-bold inline border-b-4 border-gray-500">
+            Connect with me
           </p>
-          <p className="py-6 text-black font-semibold ">Submit the form below to get in touch with me</p>
+          <p className="py-6  ">Submit the form below to get in touch with me</p>
         </div>
 
         <div className=" flex justify-center items-center">
@@ -40,7 +40,7 @@ const Contact = () => {
               className="p-2 bg-transparent border-2 border-black rounded-md text-black focus:outline-none"
             ></textarea>
 
-            <button className="font-semibold text-black bg-gradient-to-b border-black from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300">
+            <button className="text-black font-bold bg-gradient-to-b border-black from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300">
               Let's talk
             </button>
           </form>

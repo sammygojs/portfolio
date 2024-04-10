@@ -76,19 +76,38 @@ const About = () => {
           </>
         ) : (
           <Slider {...sliderSettings}>
-            <div>
-              <h2 className='text-center text-3xl py-10 mb-10'>Java Developer</h2>
-              <ul>
+            <div className='py-4'>
+              <h2 className='text-center text-4xl'>Java Developer</h2>
+              <ul className='rounded-xl py-4'>
                 {javaExperience.map((exp, index) => (
                   <li key={index}>
-                    <h3 className='font-bold p-8 '>{exp.title}</h3>
+                    <h3 className='font-bold text-2xl px-8 p-4'>{exp.title}:</h3>
+                    <p className='px-8'>{exp.description}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h2 className='text-center text-4xl'>iOS Developer</h2>
+              <ul className='rounded-xl py-4'>
+                {iosExperience.map((exp, index) => (
+                  <li key={index}>
+                    <h3 className='font-bold text-2xl px-8 p-4'>{exp.title}</h3>
+                    <p className='px-8'>{exp.description}</p>
+                  </li>
+                ))}
+              </ul>
+              {/* <ul>
+                {javaExperience.map((exp, index) => (
+                  <li key={index}>
+                    <h3 className='font-bold text-2xl px-8 p-4'>{exp.title}</h3>
                     <p className='px-8 py-4'>{exp.description}</p>
                   </li>
                 ))}
               </ul>
             </div>
             <div>
-              <h2 className='text-center text-3xl py-10 mb-10'>iOS Developer</h2>
+              <h2 className='text-center text-4xl'>iOS Developer</h2>
               <ul>
                 {iosExperience.map((exp, index) => (
                   <li key={index}>
@@ -96,7 +115,7 @@ const About = () => {
                     <p className='px-8 py-4'>{exp.description}</p>
                   </li>
                 ))}
-              </ul>
+              </ul> */}
             </div>
           </Slider>
         )}

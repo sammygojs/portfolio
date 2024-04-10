@@ -19,7 +19,7 @@ function App() {
       <Slides/>
       <Portfolio/>
       {/* <Experience/> */}
-      <Contact/>
+      {/* <Contact/> */}
       {/* <h1 className="text-4xl">Sammy</h1> */}
     </div>
   );

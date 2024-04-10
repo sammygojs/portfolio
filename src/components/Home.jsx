@@ -5,9 +5,12 @@ const Home = () => {
 
   // Define your list of spans with updated color combinations
   const spans = [
-    <span key={0} className='bg-gradient-to-r from-blue-400 via-green-400 to-indigo-400 text-transparent bg-clip-text w-fit inline'>NodeJs</span>,
-    <span key={1} className='bg-gradient-to-r from-green-400 via-blue-400 to-pink-400 text-transparent bg-clip-text w-fit inline'>Java</span>,
-    <span key={2} className='bg-gradient-to-r from-blue-400 via-pink-400 to-green-400 text-transparent bg-clip-text w-fit inline'>Laravel</span>
+    <span key={0} className='bg-gradient-to-r from-blue-400 via-green-400 to-indigo-400 text-transparent bg-clip-text w-fit inline'>Java</span>,
+    <span key={1} className='bg-gradient-to-r from-green-400 via-blue-400 to-pink-400 text-transparent bg-clip-text w-fit inline'>Python</span>,
+    <span key={2} className='bg-gradient-to-r from-blue-400 via-pink-400 to-green-400 text-transparent bg-clip-text w-fit inline'>Swift</span>,
+    <span key={0} className='bg-gradient-to-r from-blue-400 via-green-400 to-indigo-400 text-transparent bg-clip-text w-fit inline'>JS</span>,
+    <span key={1} className='bg-gradient-to-r from-green-400 via-blue-400 to-pink-400 text-transparent bg-clip-text w-fit inline'>Node JS</span>,
+    <span key={2} className='bg-gradient-to-r from-blue-400 via-pink-400 to-green-400 text-transparent bg-clip-text w-fit inline'>Flask</span>
   ];
 
   useEffect(() => {
@@ -27,7 +30,7 @@ const Home = () => {
           <div className='flex flex-col justify-center mt-20 text-center'>
             <h2 className='text-4xl sm:text-7xl font-bold text-gray-700 pt-5'>
               I'm a Software Development Engineer with Expertise in <br />
-              <div id="skills" className="relative inline sm:pr-30 pr-36">
+              <div id="skills" className="relative inline sm:pr-30 pr-36 z-0">
                 {/* Display the current span with slow animation */}
                 {spans.map((span, index) => (
                   <span

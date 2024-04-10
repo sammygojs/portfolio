@@ -38,7 +38,7 @@ import avatar from '../assets/avatar.png';
 const Home = () => {
   return (
     <div id="Home" className='w-full h-screen bg-gradient-to-b from-blue-400 to-white text-gray-500'>
-      <div className='max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4'>
+      <div className='max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-8'>
         <div className='flex flex-col items-center justify-center'>
           <div className='flex flex-col justify-center mt-20 text-center'>
             <h2 className='text-4xl sm:text-7xl font-bold text-gray-700 pt-5'>
@@ -47,9 +47,9 @@ const Home = () => {
               <span className='bg-gradient-to-r from-blue-600 via-pink-500 to-indigo-400 text-transparent bg-clip-text'>Java </span>
               <span className='bg-gradient-to-r from-blue-600 via-pink-500 to-indigo-400 text-transparent bg-clip-text'>Laravel </span>
             </h2>
-            <p className='font-bold'>I have 2 years of professional experience</p>
+            <p className='font-bold py-6'>I have 2 years of professional experience</p>
             <div>
-              <button className='font-bold text-white px-6 py-3 my-2 rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer'>
+              <button className='font-bold text-white px-6 py-3 my-2 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer'>
                 Portfolio
               </button>
             </div>

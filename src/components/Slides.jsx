@@ -43,7 +43,7 @@ const About = () => {
   const isSmallScreen = window.innerWidth <= 640; // Set your breakpoint here
 
   return (
-    <div id="About" className='p-10 font-bold z-2 w-full md:h-screen bg-gradient-to-b from-white to-blue-200 text-black flex items-center justify-center'>
+    <div id="About" className='p-10 font-bold z-2 w-full md:h-screen bg-gradient-to-b from-gray-200 to-blue-200 text-black flex items-center justify-center'>
       
       <div className='max-w-screen-lg px-16 mx-auto justify-center'>
       <p className="text-center text-6xl font-bold border-b-4 border-gray-500 mx-auto w-fit">

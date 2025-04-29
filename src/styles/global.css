@@ -1,0 +1,14 @@
+/* index.css or App.css */
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  max-width: 100vw;    /* Prevent right-side white space */
+  background-color: black; 
+  /* fallback if gif doesn't load */
+}

@@ -1,48 +1,160 @@
-import { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
-function Projects() {
-  const [repos, setRepos] = useState([]);
-  const [selectedLanguage, setSelectedLanguage] = useState('All');
+const mockProjects = [
+  // {
+  //   title: 'Taxi Booking App',
+  //   description: 'Serverless taxi booking app using AWS Lambda and DynamoDB.',
+  //   domain: 'Serverless',
+  //   image: 'https://via.placeholder.com/300x180?text=Taxi+App',
+  //   techStack: ['AWS', 'Node.js', 'DynamoDB'],
+  //   demoLink: '#',
+  //   codeLink: '#',
+  // },
+  // {
+  //   title: 'E-Commerce API',
+  //   description: 'Backend using Express and PostgreSQL.',
+  //   domain: 'Backend',
+  //   image: 'https://via.placeholder.com/300x180?text=E-Commerce+API',
+  //   techStack: ['Express.js', 'PostgreSQL', 'JWT'],
+  //   demoLink: '#',
+  //   codeLink: '#',
+  // },
+  {
+    title: 'Trade Smart',
+    description: 'Real-Time Trading Platform',
+    domain: 'Full Stack',
+    image: 'https://github.com/sammygojs/Trading-Platform',
+    techStack: ['Node.js', 'Express', 'C# ', '.NET', 'React', 'Prisma'],
+    demoLink: '#',
+    codeLink: 'https://github.com/sammygojs/Trading-Platform',
+  },
+  {
+    title: 'Portfolio Website',
+    description: 'Personal portfolio built with Next.js and Tailwind.',
+    domain: 'Frontend',
+    image: 'https://via.placeholder.com/300x180?text=Portfolio',
+    techStack: ['React', 'Tailwind'],
+    demoLink: '#',
+    codeLink: 'https://github.com/sammygojs/portfolio',
+  },
+  // {
+  //   title: 'Monitoring System',
+  //   description: 'DevOps pipeline with Prometheus and Docker.',
+  //   domain: 'DevOps',
+  //   image: 'https://via.placeholder.com/300x180?text=DevOps+Tool',
+  //   techStack: ['Prometheus', 'Docker', 'Grafana'],
+  //   demoLink: '#',
+  //   codeLink: '#',
+  // },
+];
 
-  useEffect(() => {
-    fetch('https://api.github.com/users/sammygojs/repos')
-      .then(response => response.json())
-      .then(data => {
-        const originalRepos = data.filter(repo => !repo.fork);
-        setRepos(originalRepos);
-      })
-      .catch(error => console.error('Error fetching repos:', error));
-  }, []);
+const domains = ['All','Full Stack',
+   'Frontend',
+    'Backend', 'Serverless', 'DevOps'];
 
-  const filteredRepos = selectedLanguage === 'All'
-    ? repos
-    : repos.filter(repo => repo.language === selectedLanguage);
+    function ProjectCard({ project }) {
+      return (
+        <div style={{
+          backgroundColor: '#222',
+          borderRadius: '15px',
+          padding: '1rem',
+          width: '300px',
+          minHeight: '320px', // Keeps height consistent
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-between', // Pushes button to bottom
+          boxShadow: '0 4px 12px rgba(0,0,0,0.5)',
+          textAlign: 'left',
+          transition: 'transform 0.3s ease'
+        }}
+          onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+          onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+        >
+          {/* <img src={project.image} alt={project.title} style={{
+            width: '100%',
+            borderRadius: '10px',
+            marginBottom: '1rem'
+          }} /> */}
+          <h2 style={{ fontSize: '1.25rem', marginBottom: '0.5rem' }}>{project.title}</h2>
+          <p style={{ fontSize: '0.95rem', marginBottom: '0.5rem' }}>{project.description}</p>
+    
+          {/* Tech Stack */}
+          <div style={{ marginBottom: '1rem', display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+            {project.techStack.map((tech, i) => (
+              <span key={i} style={{
+                backgroundColor: '#764ba2',
+                padding: '0.25rem 0.6rem',
+                borderRadius: '10px',
+                fontSize: '0.75rem'
+              }}>{tech}</span>
+            ))}
+          </div>
+    
+          {/* Code Access Button */}
+          <a
+            href={project.codeLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'inline-block',
+              marginTop: '0.5rem',
+              backgroundColor: '#fff',
+              color: '#111',
+              fontWeight: 'bold',
+              textDecoration: 'none',
+              padding: '0.5rem 1rem',
+              borderRadius: '8px',
+              transition: 'all 0.3s ease'
+            }}
+          >
+            Codebase
+          </a>
+        </div>
+      );
+    }
+    
 
-  // Get unique languages
-  const languages = ['All', ...new Set(repos.map(repo => repo.language).filter(Boolean))];
+export default function ProjectsWithDomainAndTags() {
+  const [selectedDomain, setSelectedDomain] = useState('All');
+  const [activeTags, setActiveTags] = useState([]);
+
+  const domainFiltered = selectedDomain === 'All'
+    ? mockProjects
+    : mockProjects.filter(p => p.domain === selectedDomain);
+
+  const availableTags = Array.from(new Set(
+    domainFiltered.flatMap(p => p.techStack)
+  )).sort();
+
+  const toggleTag = (tag) => {
+    setActiveTags(prev =>
+      prev.includes(tag) ? prev.filter(t => t !== tag) : [...prev, tag]
+    );
+  };
+
+  const filteredProjects = activeTags.length === 0
+    ? domainFiltered
+    : domainFiltered.filter(project =>
+        activeTags.every(tag => project.techStack.includes(tag))
+      );
 
   return (
     <section style={{
-      minHeight: '90vh',
-      width: '100%',
+      minHeight: '100vh',
       position: 'relative',
-      overflow: 'hidden',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
       padding: '2rem',
+      backgroundColor: '#111',
       color: 'white',
-      textAlign: 'center'
+      overflow: 'hidden'
     }}>
-      
-      {/* Background GIF Layer */}
+      {/* Background GIF */}
       <div style={{
         position: 'absolute',
         top: 0,
         left: 0,
         height: '100%',
         width: '100%',
-        backgroundImage: 'url(https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2hpMmZmdHlkc3U1eHJ1OTlpZHdoNGp3NmlxZTh6MTE2cTRyMzFwbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/w6JyQiYum7Qbu/giphy.gif)',
+        backgroundImage: 'url(https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExand2ZjIzZXR2ajAyeHlnYXpycGlidGVoZzFvd28zc3h4MDg0bzYwcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/aAbax5anloMNk6TSP9/giphy.gif)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -51,82 +163,81 @@ function Projects() {
       }} />
 
       {/* Foreground Content */}
-      <div style={{
-        position: 'relative',
-        zIndex: 2,
-        width: '100%'
-      }}>
-        <h1 style={{ fontSize: '3rem', marginBottom: '2rem' }}>My Projects</h1>
+      <div style={{ position: 'relative', zIndex: 2 }}>
+        <h1 style={{ fontSize: '3rem', marginBottom: '1.5rem', textAlign: 'center' }}>My Projects</h1>
 
-        {/* Language Filter Buttons */}
+        {/* Domain Tabs */}
         <div style={{
           display: 'flex',
-          flexWrap: 'wrap',
           justifyContent: 'center',
+          flexWrap: 'wrap',
           gap: '1rem',
-          marginBottom: '2rem'
+          marginBottom: '1.5rem'
         }}>
-          {languages.map(lang => (
+          {domains.map(domain => (
             <button
-              key={lang}
-              onClick={() => setSelectedLanguage(lang)}
+              key={domain}
+              onClick={() => {
+                setSelectedDomain(domain);
+                setActiveTags([]); // reset tags when switching domain
+              }}
               style={{
-                backgroundColor: selectedLanguage === lang ? '#764ba2' : 'white',
-                color: selectedLanguage === lang ? 'white' : '#764ba2',
-                border: 'none',
+                backgroundColor: selectedDomain === domain ? '#764ba2' : '#fff',
+                color: selectedDomain === domain ? '#fff' : '#764ba2',
                 padding: '0.5rem 1rem',
+                border: 'none',
                 borderRadius: '20px',
                 cursor: 'pointer',
-                fontWeight: 'bold',
-                transition: 'background-color 0.3s ease, color 0.3s ease'
+                fontWeight: 'bold'
               }}
             >
-              {lang}
+              {domain}
             </button>
           ))}
         </div>
 
-        {/* Projects Grid */}
+        {/* Tag Filters */}
+        {availableTags.length > 0 && (
+          <div style={{
+            display: 'flex',
+            justifyContent: 'center',
+            flexWrap: 'wrap',
+            gap: '0.5rem',
+            marginBottom: '2rem'
+          }}>
+            {availableTags.map(tag => (
+              <button
+                key={tag}
+                onClick={() => toggleTag(tag)}
+                style={{
+                  backgroundColor: activeTags.includes(tag) ? '#764ba2' : '#fff',
+                  color: activeTags.includes(tag) ? '#fff' : '#764ba2',
+                  border: 'none',
+                  padding: '0.4rem 0.8rem',
+                  borderRadius: '15px',
+                  cursor: 'pointer',
+                  fontWeight: 'bold',
+                  transition: 'all 0.3s ease'
+                }}
+              >
+                {tag}
+              </button>
+            ))}
+          </div>
+        )}
+
+        {/* Project Grid */}
         <div style={{
           display: 'flex',
           flexWrap: 'wrap',
           justifyContent: 'center',
           gap: '2rem'
         }}>
-          {filteredRepos.map(repo => (
-            <div key={repo.id} style={{
-              background: 'white',
-              color: '#333',
-              padding: '2rem',
-              borderRadius: '15px',
-              width: '300px',
-              boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)',
-              transition: 'transform 0.3s ease'
-            }}
-            onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-            onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
-            >
-              <h2 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>{repo.name}</h2>
-              <p style={{ fontSize: '1rem', marginBottom: '1rem' }}>
-                {repo.description ? repo.description : "No description available."}
-              </p>
-              <p style={{ fontStyle: 'italic', marginBottom: '1rem' }}>
-                Language: {repo.language ? repo.language : "N/A"}
-              </p>
-              <a 
-                href={repo.html_url} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                style={{ color: '#764ba2', fontWeight: 'bold', textDecoration: 'none' }}
-              >
-                View Code →
-              </a>
-            </div>
+          {filteredProjects.map(project => (
+            <ProjectCard key={project.title} project={project} />
           ))}
         </div>
       </div>
     </section>
   );
 }
-
-export default Projects;

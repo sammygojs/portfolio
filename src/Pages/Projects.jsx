@@ -1,30 +1,30 @@
 import React, { useState } from 'react';
 
 const mockProjects = [
-  // {
-  //   title: 'Taxi Booking App',
-  //   description: 'Serverless taxi booking app using AWS Lambda and DynamoDB.',
-  //   domain: 'Serverless',
-  //   image: 'https://via.placeholder.com/300x180?text=Taxi+App',
-  //   techStack: ['AWS', 'Node.js', 'DynamoDB'],
-  //   demoLink: '#',
-  //   codeLink: '#',
-  // },
-  // {
-  //   title: 'E-Commerce API',
-  //   description: 'Backend using Express and PostgreSQL.',
-  //   domain: 'Backend',
-  //   image: 'https://via.placeholder.com/300x180?text=E-Commerce+API',
-  //   techStack: ['Express.js', 'PostgreSQL', 'JWT'],
-  //   demoLink: '#',
-  //   codeLink: '#',
-  // },
+  {
+    title: 'Spring microservices app',
+    description: 'Java Spring app orchestrating microservices using Eureka Client to discover microservices automatically and dynamically while managing the service health using spring framework',
+    domain: 'Backend',
+    image: 'https://via.placeholder.com/300x180?text=Taxi+App',
+    techStack: ['Java', 'Spring', 'Eureka Client'],
+    demoLink: '#',
+    codeLink: 'https://github.com/sammygojs/Spring_EurekaClient_PhotoAppUsers',
+  },
+  {
+    title: 'Plantify',
+    description: 'This progressive web application allows users to record and view plant sightings, assist with identification, and engage in discussions through a real-time chat feature.',
+    domain: 'Full Stack',
+    image: 'https://via.placeholder.com/300x180?text=E-Commerce+API',
+    techStack: ['Node.js', 'MongoDB', 'IndexedDB', 'SPARQL'],
+    demoLink: '#',
+    codeLink: 'https://github.com/sammygojs/PlantBook',
+  },
   {
     title: 'Trade Smart',
-    description: 'Real-Time Trading Platform',
+    description: 'Real-Time Trading Platform where users can trade multi-commodities their manage portfolio. The prices of stocks are managed by an external dotnet service with dynamic prices.',
     domain: 'Full Stack',
     image: 'https://github.com/sammygojs/Trading-Platform',
-    techStack: ['Node.js', 'Express', 'C# ', '.NET', 'React', 'Prisma'],
+    techStack: ['Node.js', 'Express', 'C# ', 'Dotnet', '.NET', 'React', 'Prisma'],
     demoLink: '#',
     codeLink: 'https://github.com/sammygojs/Trading-Platform',
   },
@@ -37,82 +37,83 @@ const mockProjects = [
     demoLink: '#',
     codeLink: 'https://github.com/sammygojs/portfolio',
   },
-  // {
-  //   title: 'Monitoring System',
-  //   description: 'DevOps pipeline with Prometheus and Docker.',
-  //   domain: 'DevOps',
-  //   image: 'https://via.placeholder.com/300x180?text=DevOps+Tool',
-  //   techStack: ['Prometheus', 'Docker', 'Grafana'],
-  //   demoLink: '#',
-  //   codeLink: '#',
-  // },
+  {
+    title: 'EnvironTech',
+    description: 'Developed a full-stack carbon offset platform using React, Tailwind CSS, Flask, and MySQL, enabling users to calculate emissions, track progress, and purchase solar products.',
+    domain: 'Full Stack',
+    image: 'https://via.placeholder.com/300x180?text=DevOps+Tool',
+    techStack: ['Python', 'Flask', 'SQLite', 'Pytest', 'Tailwind CSS', 'Stripe'],
+    demoLink: '#',
+    codeLink: 'https://github.com/sammygojs/EnvironTech',
+  },
 ];
 
-const domains = ['All','Full Stack',
-   'Frontend',
-    'Backend', 'Serverless', 'DevOps'];
+const domains = ['All', 'Full Stack',
+  'Frontend',
+  'Backend', 'Serverless', 'DevOps'];
 
-    function ProjectCard({ project }) {
-      return (
-        <div style={{
-          backgroundColor: '#222',
-          borderRadius: '15px',
-          padding: '1rem',
-          width: '300px',
-          minHeight: '320px', // Keeps height consistent
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-between', // Pushes button to bottom
-          boxShadow: '0 4px 12px rgba(0,0,0,0.5)',
-          textAlign: 'left',
-          transition: 'transform 0.3s ease'
-        }}
-          onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-          onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
-        >
-          {/* <img src={project.image} alt={project.title} style={{
+function ProjectCard({ project }) {
+  return (
+    <div style={{
+      backgroundColor: '#222',
+      borderRadius: '15px',
+      padding: '1rem',
+      width: '300px',
+      minHeight: '320px', // Keeps height consistent
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-between', // Pushes button to bottom
+      boxShadow: '0 4px 12px rgba(0,0,0,0.5)',
+      textAlign: 'left',
+      transition: 'transform 0.3s ease'
+    }}
+      onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+      onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+    >
+      {/* <img src={project.image} alt={project.title} style={{
             width: '100%',
             borderRadius: '10px',
             marginBottom: '1rem'
           }} /> */}
-          <h2 style={{ fontSize: '1.25rem', marginBottom: '0.5rem' }}>{project.title}</h2>
-          <p style={{ fontSize: '0.95rem', marginBottom: '0.5rem' }}>{project.description}</p>
-    
-          {/* Tech Stack */}
-          <div style={{ marginBottom: '1rem', display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
-            {project.techStack.map((tech, i) => (
-              <span key={i} style={{
-                backgroundColor: '#764ba2',
-                padding: '0.25rem 0.6rem',
-                borderRadius: '10px',
-                fontSize: '0.75rem'
-              }}>{tech}</span>
-            ))}
-          </div>
-    
-          {/* Code Access Button */}
-          <a
-            href={project.codeLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: 'inline-block',
-              marginTop: '0.5rem',
-              backgroundColor: '#fff',
-              color: '#111',
-              fontWeight: 'bold',
-              textDecoration: 'none',
-              padding: '0.5rem 1rem',
-              borderRadius: '8px',
-              transition: 'all 0.3s ease'
-            }}
-          >
-            Codebase
-          </a>
-        </div>
-      );
-    }
-    
+      <h2 style={{ fontSize: '1.25rem', marginBottom: '0.5rem', textAlign: 'center', }}>{project.title}</h2>
+      <p style={{ fontSize: '0.95rem', marginBottom: '0.5rem' }}>{project.description}</p>
+
+      {/* Tech Stack */}
+      <div style={{ marginBottom: '1rem', display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+        {project.techStack.map((tech, i) => (
+          <span key={i} style={{
+            backgroundColor: '#764ba2',
+            padding: '0.25rem 0.6rem',
+            borderRadius: '10px',
+            fontSize: '0.75rem'
+          }}>{tech}</span>
+        ))}
+      </div>
+
+      {/* Code Access Button */}
+      <a
+        href={project.codeLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          display: 'inline-block',
+          textAlign: 'center',
+          marginTop: '0.5rem',
+          backgroundColor: '#fff',
+          color: '#111',
+          fontWeight: 'bold',
+          textDecoration: 'none',
+          padding: '0.5rem 1rem',
+          borderRadius: '8px',
+          transition: 'all 0.3s ease'
+        }}
+      >
+        Codebase
+      </a>
+    </div>
+  );
+}
+
 
 export default function ProjectsWithDomainAndTags() {
   const [selectedDomain, setSelectedDomain] = useState('All');
@@ -135,8 +136,8 @@ export default function ProjectsWithDomainAndTags() {
   const filteredProjects = activeTags.length === 0
     ? domainFiltered
     : domainFiltered.filter(project =>
-        activeTags.every(tag => project.techStack.includes(tag))
-      );
+      activeTags.every(tag => project.techStack.includes(tag))
+    );
 
   return (
     <section style={{

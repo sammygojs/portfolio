@@ -1,0 +1,10 @@
+.dynamic-intro {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    height: 2rem;
+    overflow: hidden;
+    transition: all 0.5s ease;
+  }
+  

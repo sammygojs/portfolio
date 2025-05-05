@@ -27,6 +27,20 @@
     z-index: 1;
 }
 
+.notFound-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url('https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnhybXRvcWdjc2RoaXR4cGM3cHc2bWF4NWNzbXVyaTFtMTNlNG5lZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/g7oEg8g2jukE0/giphy.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(4px) brightness(0.3);
+  z-index: 1;
+}
+
 .home-content {
     max-width: 800px;
     width: 100%;

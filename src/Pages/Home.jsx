@@ -12,8 +12,14 @@ function Home() {
         <h1>Hello, I'm <span className="highlight">Sammy</span></h1>
         <h2>Building Dynamic and Powerful Digital Experiences</h2>
         <p>
-          I’m a web developer focused on creating high-performance applications with a perfect balance of design and functionality. Passionate about React, Node.js, and modern web technologies.
+          I’m a developer focused on creating high-performance applications
+           with a perfect balance of design and functionality. Passionate about React, Node.js, 
+           and modern web technologies.
         </p>
+        {/* <p>
+  As a versatile developer, I craft high-performance applications with precision and creativity. 
+  Whether it's building scalable backends with <span className="highlight">Java & Spring</span>, creating fast APIs with <span className="highlight">Node.js</span>, or scripting intelligent solutions in <span className="highlight">Python</span>, I thrive on blending design with engineering excellence.
+</p> */}
         <Link to="/projects">
           <button className="cta-button">View My Work →</button>
         </Link>

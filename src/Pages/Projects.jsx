@@ -46,6 +46,25 @@ const mockProjects = [
     demoLink: '#',
     codeLink: 'https://github.com/sammygojs/EnvironTech',
   },
+  // {
+  //   title: 'EnvironTec',
+  //   description: 'full-stack carbon offset platform using React, Tailwind CSS, Flask, and MySQL, enabling users to calculate emissions, track progress, and purchase solar products.',
+  //   domain: 'Full Stack',
+  //   image: 'https://via.placeholder.com/300x180?text=DevOps+Tool',
+  //   techStack: ['Python', 'Flask', 'SQLite', 'Pytest', 'Tailwind CSS', 'Stripe'],
+  //   demoLink: '#',
+  //   codeLink: 'https://github.com/sammygojs/EnvironTech',
+  // },
+  {
+    title: 'Go_TaskManager',
+    description: 'A full-featured backend task management API built with Go, Gin, and GORM. Includes JWT authentication, admin controls, projects, tags, pagination, filtering, and Swagger documentation.',
+    domain: 'Backend',
+    image: 'https://via.placeholder.com/300x180?text=Go+Task+API',
+    techStack: ['Go', 'Gin', 'GORM', 'SQLite', 'JWT', 'Swagger'],
+    demoLink: '#',
+    codeLink: 'https://github.com/sammygojs/go_project_tasks_project',
+  },
+  
 ];
 
 const domains = ['All', 'Full Stack',

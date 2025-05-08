@@ -174,7 +174,7 @@ export default function ProjectsWithDomainAndTags() {
         left: 0,
         height: '100%',
         width: '100%',
-        backgroundImage: 'url(https://images.unsplash.com/photo-1557682250-33bd709cbe85?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80)',
+        backgroundImage: 'url(/assets/bg.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',

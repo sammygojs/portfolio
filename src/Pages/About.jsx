@@ -39,7 +39,7 @@ function About() {
         left: 0,
         height: '100%',
         width: '100%',
-        backgroundImage: 'url(https://images.unsplash.com/photo-1557682250-33bd709cbe85?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80)',
+        backgroundImage: 'url(/assets/bg.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -68,13 +68,107 @@ function About() {
           About Me
         </h1>
 
-        <p style={{ fontSize: '1.2rem', lineHeight: '1.8', marginBottom: '2rem' }}>
-          I’m <strong>Sumit Akoliya</strong>, a Sheffield-based software engineer with a passion for building fast, scalable, and user-centric applications. With experience across <strong>Java Spring Boot, Node.js, Python, and cloud platforms like AWS and Azure</strong>, I specialize in developing distributed systems, secure APIs, and microservices for real-world production use.
-        </p>
+        {/* 🎓 Education */}
+        <div style={{
+          // marginBottom: '3rem',
+          // padding: '1.5rem',
+          // backgroundColor: 'rgba(255, 255, 255, 0.05)',
+          // borderRadius: '12px',
+          // boxShadow: '0 4px 15px rgba(0,0,0,0.2)',
+          // backdropFilter: 'blur(6px)',
+          marginBottom: '3rem'
+        }}>
+          <h2 style={{
+            fontSize: '2rem',
+            marginBottom: '1rem',
+            borderBottom: '1px solid #ffffff50',
+            paddingBottom: '0.5rem',
+            textAlign: 'center'
+          }}>
+            🎓 Education
+          </h2>
 
-        <p style={{ fontSize: '1.2rem', lineHeight: '1.8', marginBottom: '2rem' }}>
-          My journey spans across large-scale e-commerce systems, search optimization services, and event-driven architectures. I focus heavily on <strong>Test-Driven Development (TDD)</strong>, continuous integration, and clean code practices. I’ve worked in agile teams, mentored junior devs, and consistently delivered high-impact features for global clients.
-        </p>
+          {/* Masters */}
+          <div style={{ marginBottom: '1.5rem',justifyItems: 'center' }}>
+            <h3 style={{ fontSize: '1.5rem', marginBottom: '0.3rem' }}>
+              Masters Advanced Computer Science
+            </h3>
+            <p style={{ margin: 0, fontSize: '1.1rem', color: '#ccc' }}>
+              <strong>University of Sheffield, UK</strong> — Graduated with Merit
+            </p>
+            <ul style={{ marginTop: '0.5rem', fontSize: '1rem', paddingLeft: '1.2rem', color: '#ccc' }}>
+              <li>Specialized in backend systems, distributed computing, and software architecture</li>
+              <li>Dissertation on graph algorithms & flow-based heuristics for NP-hard problems</li>
+              <li>Team-based projects in Django, GPU (CUDA), and full-stack Java</li>
+            </ul>
+          </div>
+
+          {/* Bachelors */}
+          <div style={{justifyItems: 'center'}}>
+            <h3 style={{ fontSize: '1.5rem', marginBottom: '0.3rem' }}>
+              BEng Computer Engineering
+            </h3>
+            <ul style={{ marginTop: '0.5rem', fontSize: '1rem', paddingLeft: '1.2rem', color: '#ccc' }}>
+              <li>Core subjects: Data Structures, OS, DBMS, Algorithms, OOP</li>
+              <li>Capstone: Real-time transport routing system with GPS/traffic APIs</li>
+              <li>Mentored juniors via coding club and hosted tech events</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* 📁 Certifications */}
+        <div style={{ marginBottom: '3rem' }}>
+          <h2 style={{
+            fontSize: '2rem',
+            marginBottom: '1rem',
+            borderBottom: '1px solid #ffffff50',
+            paddingBottom: '0.5rem',
+            textAlign: 'center'
+          }}>
+            📁 Certifications
+          </h2>
+
+          <div style={{
+            display: 'flex',
+            justifyContent: 'center',
+            flexWrap: 'wrap',
+            gap: '2rem',
+          }}>
+            <img
+              src="assets/metaCert.png"
+              alt="Meta Backend Certificate"
+              style={{
+                width: '300px',
+                height: '300px',
+                borderRadius: '12px',
+                border: '2px solid white',
+                boxShadow: '0 4px 12px rgba(0,0,0,0.5)'
+              }}
+            />
+            <img
+              src="assets/GoogleCert.png"
+              alt="Google Cybersecurity Certificate"
+              style={{
+                width: '300px',
+                height: '300px',
+                borderRadius: '12px',
+                border: '2px solid white',
+                boxShadow: '0 4px 12px rgba(0,0,0,0.5)'
+              }}
+            />
+          </div>
+        </div>
+
+        {/* 🧠 Domain Expertise Tabs */}
+        <h2 style={{
+          fontSize: '2rem',
+          marginBottom: '1.5rem',
+          borderBottom: '1px solid #ffffff50',
+          paddingBottom: '0.5rem',
+          textAlign: 'center'
+        }}>
+          🧠 Domain Expertise
+        </h2>
 
         <div style={{
           display: 'flex',

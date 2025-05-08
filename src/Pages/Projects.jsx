@@ -174,7 +174,7 @@ export default function ProjectsWithDomainAndTags() {
         left: 0,
         height: '100%',
         width: '100%',
-        backgroundImage: 'url(https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExand2ZjIzZXR2ajAyeHlnYXpycGlidGVoZzFvd28zc3h4MDg0bzYwcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/aAbax5anloMNk6TSP9/giphy.gif)',
+        backgroundImage: 'url(https://images.unsplash.com/photo-1557682250-33bd709cbe85?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',

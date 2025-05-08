@@ -21,7 +21,7 @@ function Contact() {
         left: 0,
         height: '100%',
         width: '100%',
-        backgroundImage: 'url(https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjI4dGp6NDU5NXphMG00dmEweWcwdzB0emV6YXRuOThjd2VmeXpzcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fmMdxlVwsCmTtA4V6a/giphy.gif)',
+        backgroundImage: 'url(https://images.unsplash.com/photo-1557682250-33bd709cbe85?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',

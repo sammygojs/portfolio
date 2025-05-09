@@ -108,6 +108,28 @@ function Contact() {
           >
             💼 Connect on LinkedIn
           </a>
+
+
+          <a href="https://github.com/sammygojs" target="_blank" rel="noopener noreferrer" style={{
+            background: 'white',
+            color: '#764ba2',
+            padding: '0.8rem 2rem',
+            borderRadius: '30px',
+            textDecoration: 'none',
+            fontWeight: 'bold',
+            transition: 'background-color 0.3s, color 0.3s'
+          }}
+          onMouseOver={(e) => {
+            e.target.style.backgroundColor = '#764ba2';
+            e.target.style.color = 'white';
+          }}
+          onMouseOut={(e) => {
+            e.target.style.backgroundColor = 'white';
+            e.target.style.color = '#764ba2';
+          }}
+          >
+             Explore GitHub
+          </a>
         </div>
       </div>
     </section>

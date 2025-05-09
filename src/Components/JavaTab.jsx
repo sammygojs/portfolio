@@ -3,7 +3,7 @@
 function JavaTab() {
     return (
       <div>
-        <h2 style={{ fontSize: '1.6rem', marginBottom: '1rem', fontWeight: 'bold' }}>⚡ Java Backend Highlights</h2>
+        <h2 style={{ fontSize: '1.6rem', marginBottom: '1rem', fontWeight: 'bold' }}>☕ Java Backend Highlights</h2>
         <ul style={{
           fontSize: '1.1rem',
           lineHeight: '1.8',

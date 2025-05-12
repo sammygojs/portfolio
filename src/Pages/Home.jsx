@@ -21,7 +21,15 @@ function Home() {
   Whether it's building scalable backends with <span className="highlight">Java & Spring</span>, creating fast APIs with <span className="highlight">Node.js</span>, or scripting intelligent solutions in <span className="highlight">Python</span>, I thrive on blending design with engineering excellence.
 </p> */}
         <Link to="/projects">
-          <button className="cta-button">View My Work</button>
+          <button className="cta-button"
+          onClick={() => {
+            if (window.gtag) {
+              window.gtag('event', 'click', {
+                event_category: 'navigation',
+                event_label: 'Home: View My Work Button',
+              });
+            }
+          }}>View My Work</button>
         </Link>
       </div>
     </section>

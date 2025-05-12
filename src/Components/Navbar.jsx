@@ -46,10 +46,46 @@ function Navbar() {
         className={`navbar-links ${menuOpen ? 'mobile-active' : ''}`}
         ref={menuRef}
       >
-        <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
-        <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
-        <Link to="/projects" onClick={() => setMenuOpen(false)}>Projects</Link>
-        <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
+        {/* <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link> */}
+        <Link to="/" onClick={() => {
+          setMenuOpen(false);
+          window.gtag?.('event', 'click', {
+            event_category: 'navbar',
+            event_label: 'Navbar: Home',
+          });
+        }}>
+          Home
+        </Link>
+        {/* <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link> */}
+        <Link to="/about" onClick={() => {
+          setMenuOpen(false);
+          window.gtag?.('event', 'click', {
+            event_category: 'navbar',
+            event_label: 'Navbar: About',
+          });
+        }}>
+          About
+        </Link>
+        {/* <Link to="/projects" onClick={() => setMenuOpen(false)}>Projects</Link> */}
+        <Link to="/projects" onClick={() => {
+          setMenuOpen(false);
+          window.gtag?.('event', 'click', {
+            event_category: 'navbar',
+            event_label: 'Navbar: Projects',
+          });
+        }}>
+          Projects
+        </Link>
+        {/* <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link> */}
+        <Link to="/contact" onClick={() => {
+          setMenuOpen(false);
+          window.gtag?.('event', 'click', {
+            event_category: 'navbar',
+            event_label: 'Navbar: Contact',
+          });
+        }}>
+          Contact
+        </Link>
       </div>
     </nav>
   );

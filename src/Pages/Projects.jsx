@@ -126,6 +126,12 @@ function ProjectCard({ project }) {
           borderRadius: '8px',
           transition: 'all 0.3s ease'
         }}
+        onClick={() => {
+          window.gtag?.('event', 'click', {
+            event_category: 'project_code',
+            event_label: `Codebase: ${project.title}`,
+          });
+        }}
       >
         Codebase
       </a>

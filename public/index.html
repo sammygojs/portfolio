@@ -25,11 +25,16 @@
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-651HQL8M7K"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+    // window.dataLayer = window.dataLayer || [];
+    // function gtag() { dataLayer.push(arguments); }
+    // gtag('js', new Date());
 
-    gtag('config', 'G-651HQL8M7K');
+    // gtag('config', 'G-651HQL8M7K');
+    window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-651HQL8M7K', { send_page_view: false }); // important for SPA
+
   </script>
 
 </head>

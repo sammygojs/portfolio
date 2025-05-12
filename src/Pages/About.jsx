@@ -89,7 +89,7 @@ function About() {
           </h2>
 
           {/* Masters */}
-          <div style={{ marginBottom: '1.5rem',justifyItems: 'center' }}>
+          <div style={{ marginBottom: '1.5rem', justifyItems: 'center' }}>
             <h3 style={{ fontSize: '1.5rem', marginBottom: '0.3rem' }}>
               Masters Advanced Computer Science
             </h3>
@@ -104,7 +104,7 @@ function About() {
           </div>
 
           {/* Bachelors */}
-          <div style={{justifyItems: 'center'}}>
+          <div style={{ justifyItems: 'center' }}>
             <h3 style={{ fontSize: '1.5rem', marginBottom: '0.3rem' }}>
               BEng Computer Engineering
             </h3>
@@ -177,10 +177,34 @@ function About() {
           flexWrap: 'wrap',
           justifyContent: 'center'
         }}>
-          <button onClick={() => setActiveTab('java')} style={tabButtonStyle(activeTab === 'java')}>Java Backend</button>
-          <button onClick={() => setActiveTab('node')} style={tabButtonStyle(activeTab === 'node')}>Node + React</button>
-          <button onClick={() => setActiveTab('pythongo')} style={tabButtonStyle(activeTab === 'pythongo')}>Python + Go</button>
-          <button onClick={() => setActiveTab('devOps')} style={tabButtonStyle(activeTab === 'devOps')}>DevOps</button>
+          <button onClick={() => {
+            setActiveTab('java');
+            window.gtag?.('event', 'click', {
+              event_category: 'tabs',
+              event_label: 'About: Java Backend Tab',
+            });
+          }} style={tabButtonStyle(activeTab === 'java')}>Java Backend</button>
+          <button onClick={() => {
+            setActiveTab('node');
+            window.gtag?.('event', 'click', {
+              event_category: 'tabs',
+              event_label: 'About: Node Tab',
+            });
+          }} style={tabButtonStyle(activeTab === 'node')}>Node + React</button>
+          <button onClick={() => {
+            setActiveTab('pythongo');
+            window.gtag?.('event', 'click', {
+              event_category: 'tabs',
+              event_label: 'About: Python Tab',
+            });
+          }} style={tabButtonStyle(activeTab === 'pythongo')}>Python + Go</button>
+          <button onClick={() => {
+            setActiveTab('devOps');
+            window.gtag?.('event', 'click', {
+              event_category: 'tabs',
+              event_label: 'About: devOps Tab',
+            });
+          }} style={tabButtonStyle(activeTab === 'devOps')}>DevOps</button>
         </div>
 
         {renderTabContent()}

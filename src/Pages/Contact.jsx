@@ -84,6 +84,12 @@ function Contact() {
             e.target.style.backgroundColor = 'white';
             e.target.style.color = '#764ba2';
           }}
+          onClick={() => {
+            window.gtag?.('event', 'click', {
+              event_category: 'external_link',
+              event_label: 'Email Button Click',
+            });
+          }}
           >
             📧 Email Me
           </a>
@@ -104,6 +110,12 @@ function Contact() {
           onMouseOut={(e) => {
             e.target.style.backgroundColor = 'white';
             e.target.style.color = '#764ba2';
+          }}
+          onClick={() => {
+            window.gtag?.('event', 'click', {
+              event_category: 'external_link',
+              event_label: 'LinkedIn Button Click',
+            });
           }}
           >
             💼 Connect on LinkedIn
@@ -126,6 +138,12 @@ function Contact() {
           onMouseOut={(e) => {
             e.target.style.backgroundColor = 'white';
             e.target.style.color = '#764ba2';
+          }}
+          onClick={() => {
+            window.gtag?.('event', 'click', {
+              event_category: 'external_link',
+              event_label: 'GitHub Button Click',
+            });
           }}
           >
              Explore GitHub
